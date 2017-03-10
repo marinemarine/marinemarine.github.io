@@ -21,10 +21,18 @@ $(document).ready(function() {
 		success : function(data) {
 			$('#bitcoin_block_number').append(data.blocks);
 			$('#bitcoin_difficulty').append(data.difficulty);
+			$('#bitcoin_version').append(data.version);
+			$('#bitcoin_protocolversion').append(data.protocolversion);
+			$('#bitcoin_connections').append(data.connections);
+			$('#bitcoin_timeoffset').append(data.timeoffset);
 		},
 		error : function(xhr, status, err) {
 			$('#bitcoin_block_number').append(err+" N/A");
 			$('#bitcoin_difficulty').append(err+" N/A");
+			$('#bitcoin_version').append(err+" N/A");
+			$('#bitcoin_protocolversion').append(err+" N/A");
+			$('#bitcoin_connections').append(err+" N/A");
+			$('#bitcoin_timeoffset').append(err+" N/A");
 		}
 	});
 });
