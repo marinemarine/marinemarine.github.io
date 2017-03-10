@@ -9,7 +9,6 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
 xmlhttp.send();*/
 
-/*function bitcoinAuDemarrage(){*/
 $(document).ready(function() {
 	$.ajax({
 		url : "http://bitcoin.mubiz.com/info",
@@ -21,10 +20,11 @@ $(document).ready(function() {
 
 		success : function(data) {
 			$('#bitcoin_block_number').append(data.blocks);
+			$('#bitcoin_difficulty').append(data.difficulty);
 		},
-
 		error : function(xhr, status, err) {
 			$('#bitcoin_block_number').append(err+" N/A");
+			$('#bitcoin_difficulty').append(err+" N/A");
 		}
 	});
 });
