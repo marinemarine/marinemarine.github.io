@@ -11,7 +11,7 @@ xmlhttp.send();*/
 
 $(document).ready(function() {
 	$.ajax({
-		url : "https://api.blockcypher.com/v1/btc/main",
+		url : "http://bitcoin.mubiz.com/info",
 		dataType : "json",
 		contentType : "application/json; charset=utf-8",
 		type : "GET",
