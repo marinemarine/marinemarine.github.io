@@ -9,6 +9,7 @@ xmlhttp.onreadystatechange = function() {
 xmlhttp.open("GET", "https://api.blockcypher.com/v1/btc/main", true);
 xmlhttp.send();*/
 
+/*function bitcoinAuDemarrage(){*/
 $(document).ready(function() {
 	$.ajax({
 		url : "http://bitcoin.mubiz.com/info",
